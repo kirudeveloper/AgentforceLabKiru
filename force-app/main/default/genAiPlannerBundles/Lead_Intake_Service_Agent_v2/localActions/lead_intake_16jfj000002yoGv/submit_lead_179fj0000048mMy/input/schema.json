@@ -1,0 +1,15 @@
+{
+  "required" : [ "lead_data" ],
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "lead_data" : {
+      "title" : "lead_data",
+      "description" : "Lead intake form fields including name, company, email, phone, source, and interest.",
+      "lightning:type" : "c__leadIntakeInput",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    }
+  },
+  "lightning:type" : "lightning__objectType",
+  "lightning:textIndexed" : true
+}

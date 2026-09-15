@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiFunction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Creates a Salesforce Lead from the completed intake form</description>
+    <developerName>Submit_Lead</developerName>
+    <invocationTarget>LeadIntakeService</invocationTarget>
+    <invocationTargetType>apex</invocationTargetType>
+    <isConfirmationRequired>false</isConfirmationRequired>
+    <isIncludeInProgressIndicator>true</isIncludeInProgressIndicator>
+    <localDeveloperName>Submit_Lead</localDeveloperName>
+    <masterLabel>Submit Lead</masterLabel>
+    <progressIndicatorMessage>Saving your lead...</progressIndicatorMessage>
+</GenAiFunction>

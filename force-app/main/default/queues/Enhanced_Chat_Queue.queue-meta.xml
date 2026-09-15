@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <name>Enhanced Chat Queue</name>
+    <queueMembers>
+        <users>
+            <user>kirubakaranece.1d1dbbc5855d@agentforce.com</user>
+        </users>
+    </queueMembers>
+    <queueRoutingConfig>Enhanced_Chat_Queue_Routing</queueRoutingConfig>
+    <queueSobject>
+        <sobjectType>MessagingSession</sobjectType>
+    </queueSobject>
+</Queue>

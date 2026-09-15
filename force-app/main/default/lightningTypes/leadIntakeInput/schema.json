@@ -1,0 +1,5 @@
+{
+    "title": "Lead Intake Input",
+    "description": "Lead intake form data collected inside the agent",
+    "lightning:type": "@apexClassType/c__LeadIntakeService$LeadInput"
+}

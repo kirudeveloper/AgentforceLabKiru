@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Lead Intake</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #0b1220;
+      background: #f6f8fb;
+      padding: 48px 24px;
+    }
+    main { max-width: 640px; }
+    h1 { font-size: 32px; line-height: 1.2; margin: 0 0 12px; }
+    p { color: #5b6578; line-height: 1.6; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Talk with our Lead Intake Agent</h1>
+    <p>Use the chat button in the lower-right corner to share your details.</p>
+  </main>
+
+  <script type='text/javascript'>
+    function initEmbeddedMessaging() {
+      try {
+        embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
+
+        embeddedservice_bootstrap.init(
+          '00Dfj00000YU389',
+          'Yuki',
+          'https://orgfarm-0e4f0906e4-dev-ed.develop.my.site.com/ESWYuki1789490539980',
+          {
+            scrt2URL: 'https://orgfarm-0e4f0906e4-dev-ed.develop.my.salesforce-scrt.com'
+          }
+        );
+      } catch (err) {
+        console.error('Error loading Embedded Messaging: ', err);
+      }
+    };
+  </script>
+  <script type='text/javascript' src='https://orgfarm-0e4f0906e4-dev-ed.develop.my.site.com/ESWYuki1789490539980/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
+</body>
+</html>

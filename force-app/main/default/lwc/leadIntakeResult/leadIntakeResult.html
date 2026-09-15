@@ -1,0 +1,58 @@
+<template>
+    <div class={cardClass}>
+        <header class="result__header">
+            <lightning-icon
+                icon-name={iconName}
+                size="small"
+                alternative-text="Lead result"
+            ></lightning-icon>
+            <div>
+                <p class="result__eyebrow">{eyebrow}</p>
+                <h2 class="result__title">{heading}</h2>
+            </div>
+        </header>
+
+        <div class="result__body">
+            <p class="result__summary">{summary}</p>
+
+            <template lwc:if={success}>
+                <dl class="result__grid">
+                    <div>
+                        <dt>Name</dt>
+                        <dd>{leadName}</dd>
+                    </div>
+                    <div>
+                        <dt>Company</dt>
+                        <dd>{company}</dd>
+                    </div>
+                    <div>
+                        <dt>Status</dt>
+                        <dd><span class="result__pill">{status}</span></dd>
+                    </div>
+                    <div>
+                        <dt>Source</dt>
+                        <dd>{leadSource}</dd>
+                    </div>
+                    <div class="result__span">
+                        <dt>Email</dt>
+                        <dd>{email}</dd>
+                    </div>
+                    <div>
+                        <dt>Phone</dt>
+                        <dd>{phone}</dd>
+                    </div>
+                    <div>
+                        <dt>Created</dt>
+                        <dd>{createdDate}</dd>
+                    </div>
+                    <template lwc:if={interest}>
+                        <div class="result__span">
+                            <dt>Interest</dt>
+                            <dd>{interest}</dd>
+                        </div>
+                    </template>
+                </dl>
+            </template>
+        </div>
+    </div>
+</template>

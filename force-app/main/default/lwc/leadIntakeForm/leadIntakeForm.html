@@ -1,0 +1,117 @@
+<template>
+    <div class="intake">
+        <div class="intake__header">
+            <p class="intake__eyebrow">Lead intake</p>
+            <h2 class="intake__title">Tell us about this prospect</h2>
+            <p class="intake__subtitle">Fill in the fields, then press Send in the chat.</p>
+        </div>
+
+        <div class="intake__body">
+            <div class="intake__grid">
+                <label class="intake__field">
+                    <span>First name</span>
+                    <input
+                        name="firstName"
+                        type="text"
+                        value={firstName}
+                        placeholder="Avery"
+                        disabled={readOnly}
+                        oninput={handleInputChange}
+                    />
+                </label>
+                <label class="intake__field">
+                    <span>Last name *</span>
+                    <input
+                        name="lastName"
+                        type="text"
+                        value={lastName}
+                        placeholder="Chen"
+                        required
+                        disabled={readOnly}
+                        oninput={handleInputChange}
+                    />
+                </label>
+                <label class="intake__field intake__span">
+                    <span>Email</span>
+                    <input
+                        name="email"
+                        type="email"
+                        value={email}
+                        placeholder="avery@company.com"
+                        disabled={readOnly}
+                        oninput={handleInputChange}
+                    />
+                </label>
+                <label class="intake__field intake__span">
+                    <span>Phone</span>
+                    <input
+                        name="phone"
+                        type="tel"
+                        value={phone}
+                        placeholder="(415) 555-0199"
+                        disabled={readOnly}
+                        oninput={handleInputChange}
+                    />
+                </label>
+                <label class="intake__field intake__span">
+                    <span>Company *</span>
+                    <input
+                        name="company"
+                        type="text"
+                        value={company}
+                        placeholder="Company name"
+                        required
+                        disabled={readOnly}
+                        oninput={handleInputChange}
+                    />
+                </label>
+                <label class="intake__field intake__span">
+                    <span>Job title</span>
+                    <input
+                        name="title"
+                        type="text"
+                        value={title}
+                        placeholder="Operations Manager"
+                        disabled={readOnly}
+                        oninput={handleInputChange}
+                    />
+                </label>
+                <label class="intake__field">
+                    <span>How did they hear about us?</span>
+                    <select
+                        name="leadSource"
+                        disabled={readOnly}
+                        onchange={handleInputChange}
+                    >
+                        <template for:each={leadSourceOptions} for:item="opt">
+                            <option key={opt.value} value={opt.value}>{opt.label}</option>
+                        </template>
+                    </select>
+                </label>
+                <label class="intake__field">
+                    <span>What are they interested in?</span>
+                    <select
+                        name="interest"
+                        disabled={readOnly}
+                        onchange={handleInputChange}
+                    >
+                        <option value="">Select an interest</option>
+                        <template for:each={interestOptions} for:item="opt">
+                            <option key={opt.value} value={opt.value}>{opt.label}</option>
+                        </template>
+                    </select>
+                </label>
+                <label class="intake__field intake__span">
+                    <span>Notes</span>
+                    <textarea
+                        name="description"
+                        maxlength="1000"
+                        placeholder="Budget, timeline, product of interest..."
+                        disabled={readOnly}
+                        oninput={handleInputChange}
+                    >{description}</textarea>
+                </label>
+            </div>
+        </div>
+    </div>
+</template>

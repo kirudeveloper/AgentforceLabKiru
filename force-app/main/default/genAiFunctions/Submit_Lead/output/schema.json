@@ -1,0 +1,24 @@
+{
+    "unevaluatedProperties": false,
+    "properties": {
+        "lead_id": {
+            "title": "lead_id",
+            "description": "Id of the created Lead",
+            "lightning:type": "lightning__textType",
+            "lightning:isPII": false,
+            "copilotAction:isDisplayable": false,
+            "copilotAction:isUsedByPlanner": true,
+            "copilotAction:useHydratedPrompt": false
+        },
+        "lead_result": {
+            "title": "lead_result",
+            "description": "Created lead details for display",
+            "lightning:type": "c__leadIntakeResult",
+            "lightning:isPII": false,
+            "copilotAction:isDisplayable": true,
+            "copilotAction:isUsedByPlanner": true,
+            "copilotAction:useHydratedPrompt": false
+        }
+    },
+    "lightning:type": "lightning__objectType"
+}

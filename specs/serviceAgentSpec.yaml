@@ -1,0 +1,24 @@
+agentType: customer
+companyName: Summit Power Systems
+companyDescription: Summit Power Systems manufactures and services portable
+  generators, standby generators, and electrical distribution equipment for
+  residential and commercial customers. Support covers installation guidance,
+  maintenance schedules, troubleshooting, warranty claims, and parts
+  replacement.
+companyWebsite: https://www.summitpowersystems.example.com
+role: "Customer-facing support agent that helps customers of a portable
+  generator and electrical equipment manufacturer: answer product questions,
+  check the status of their existing support cases, log new support cases, and
+  hand off to a human agent when needed."
+maxNumOfTopics: 4
+enrichLogs: false
+tone: neutral
+topics:
+  - name: Product Information Assistance
+    description: Provide details on generator models, specifications, and features.
+  - name: Support Case Status Tracking
+    description: Allow customers to check the progress of their existing support cases.
+  - name: Warranty Claims Processing
+    description: Assist customers in submitting and managing warranty claims.
+  - name: Parts Replacement Guidance
+    description: Guide customers on ordering and replacing generator parts.

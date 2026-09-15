@@ -1,0 +1,14 @@
+{
+    "required": ["lead_data"],
+    "unevaluatedProperties": false,
+    "properties": {
+        "lead_data": {
+            "title": "lead_data",
+            "description": "Lead intake form fields collected from the custom Lightning type.",
+            "lightning:type": "c__leadIntakeInput",
+            "lightning:isPII": false,
+            "copilotAction:isUserInput": true
+        }
+    },
+    "lightning:type": "lightning__objectType"
+}

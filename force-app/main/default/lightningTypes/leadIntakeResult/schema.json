@@ -1,0 +1,5 @@
+{
+    "title": "Lead Intake Result",
+    "description": "Created lead details shown after successful intake",
+    "lightning:type": "@apexClassType/c__LeadIntakeService$LeadResult"
+}
