@@ -16,10 +16,13 @@ private class LeadIntakeServiceTest {
         LeadIntakeService.SubmitLeadRequest request = new LeadIntakeService.SubmitLeadRequest();
         request.lead_data = input;
 
+        Test.setMock(HttpCalloutMock.class, new LeadIntegrationCalloutMock());
+        LeadIntegrationService.suppressOutboundCallouts = true;
         Test.startTest();
         List<LeadIntakeService.SubmitLeadResponse> responses = LeadIntakeService.submitLead(
             new List<LeadIntakeService.SubmitLeadRequest>{ request }
         );
+        Test.getEventBus().deliver();
         Test.stopTest();
 
         Assert.areEqual(1, responses.size(), 'One response expected');
@@ -68,6 +71,8 @@ private class LeadIntakeServiceTest {
         LeadIntakeService.SubmitLeadRequest request = new LeadIntakeService.SubmitLeadRequest();
         request.lead_data = input;
 
+        Test.setMock(HttpCalloutMock.class, new LeadIntegrationCalloutMock());
+        LeadIntegrationService.suppressOutboundCallouts = true;
         List<LeadIntakeService.SubmitLeadResponse> responses = LeadIntakeService.submitLead(
             new List<LeadIntakeService.SubmitLeadRequest>{ request }
         );
